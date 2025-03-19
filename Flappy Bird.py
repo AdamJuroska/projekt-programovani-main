@@ -36,7 +36,7 @@ pass_pipe = False
 def init_db():
     conn = sqlite3.connect('scores.db')  # Připojení k databázi
     c = conn.cursor()
-    c.execute('''CREATE TABLE IF NOT EXISTS scores (id INTEGER PRIMARY KEY, score INTEGER)''')
+    c.execute('''CREATE TABLE IF NOT EXISTS scores (id INTEGER PRIMARY KEY AUTOINCREMENT, score INTEGER)''') #Ověří že tabulka existuje ;)
     conn.commit()
     conn.close()
 
