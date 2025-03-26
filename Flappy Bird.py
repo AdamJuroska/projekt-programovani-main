@@ -57,6 +57,8 @@ def get_high_score():
     conn.close()
     return high_score if high_score is not None else 0
 
+high_score = get_high_score()
+
 #načte obrázky
 bg = pygame.image.load('img/bg.png')
 ground_img = pygame.image.load('img/ground.png')
@@ -216,7 +218,7 @@ while run:
 				pass_pipe = False
 
 	draw_text(str(score), font, white, int(screen_width / 2), 20)
-
+	draw_text(f"Nejvyšší skóre: {high_score}", font, white, int(screen_width / 2) - 150, 80)
 
 
 	#sleduje kolize
@@ -248,12 +250,13 @@ while run:
 			ground_scroll = 0
 
 		pipe_group.update()
+		high_score = get_high_score()
 
 	#sleduje konec hry a restart
 	if game_over == True:
-		save_score(score)
 		if button.draw() == True:
 			game_over = False
+			save_score(score)
 			score = reset_game()
 
 
