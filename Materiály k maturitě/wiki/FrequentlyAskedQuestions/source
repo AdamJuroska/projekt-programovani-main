@@ -1,0 +1,94 @@
+<p>Frequently asked questions regarding pygame and development with pygame.  If you do not find your development question answered here,  you might want to take a look at the <a href="CookBook">CookBook</a> or read the <a href="http://www.pygame.org/docs">documentation</a> and <a href="tutorials">tutorials</a> once more.</p>
+<p>The Pygame  documentation is also installed with Pygame itself.  They are located in site-packages/pygame/docs and can be accessed with:</p>
+
+<code>
+python -m pygame.docs 
+</code>
+
+<h4>In IDLE why does the Pygame window not close correctly?</h4>
+
+<p>This is caused by the IDLE python interpreter, which seems to keep the references around somehow. Make sure, you invoke pygame.quit() on exiting your application or game.</p>
+
+<code>
+# ... running = True
+while running:
+    event = pygame.event.wait ()
+    if event.type == pygame.QUIT:
+        running = False  # Be IDLE friendly
+pygame.quit ()
+</code>
+
+<p>and if you also want to close the window on exceptions you might solve it like this:</p>
+
+<code>
+try:
+    main()
+except Exception, e:
+    tb = sys.exc_info()[2]
+    traceback.print_exception(e.__class__, e, tb)
+pygame.quit()
+</code>
+
+<p>On Windows if you open a python file with a ">right-click: Edit with Idle" the editor and interactive prompt both run from the same Python process. To make sure the game runs in a separate process first start IDLE from the Start Menu (it is under Python <em>X.X</em> in the programs section) then open the edit window for the game.</p>
+<p>SDL, on which Pygame is based, uses the environment variable <tt>SDL_VIDEO_CENTERED</tt> to indicate the windows should be centered. Note the environment variable is set before Pygame is initialized by the call to init().</p>
+
+<code>
+import pygame
+import os 
+os.environ['SDL_VIDEO_CENTERED'] = '1'
+pygame.init()
+try:
+     screen = pygame.display.set_mode((200, 200))
+     # This should show a blank 200 by 200 window centered on the screen
+     pygame.display.flip()
+     while True:
+         event = pygame.event.wait()
+         if event.type == pygame.QUIT:
+             break
+finally:
+     pygame.quit()  # Keep this IDLE friendly
+</code>
+
+<p>So why is this undocumented? While SDL recognizes several environment variable that set up initial conditions, their use is unofficial. But they have been around long enough that they are unlikely to change now. A list of environment variable recognized by SDL 1.2 is provided. Other configurable parameters include which video and audio drivers to use as well as the id of existing window to draw within.</p>
+
+<h4>How do I set the video driver Pygame uses?</h4>
+<p>SDL, on which Pygame is based, checks the environment  variable <tt>SDL_VIDEODRIVER</tt> for a video driver to use. If not found it uses a default for the operating system. This code snippet sets the driver to "windib" for Windows. Note the environment variable must be set before Pygame is initialized by the call to <tt>pygame.init()</tt>.</p>
+
+<code>
+import os
+import platform
+if platform.system() == 'Windows':
+    os.environ['SDL_VIDEODRIVER'] = 'windib'
+# rest or program goes here. 
+</code>
+
+<p>A list of supported video drivers is provided here. See the <a href="#How%20do%20I%20centering%20the%20pygame%20window%20on%20the%20screen?">"How do I centering the pygame window on the screen?"</a> above for more information.</p>
+<p>The initial position of the Pygame window can be set with the <tt>SDL_VIDEO_WINDOW_POS</tt> environment variable. It takes a string, two comma separated integer values. The position is the upper left corner of the window in screen coordinates.</p>
+
+<code>
+import os
+position = 100, 50
+os.environ['SDL_VIDEO_WINDOW_POS'] = str(position[0]) + "," + str(position[1])
+</code>
+
+<p>See <a href="#How%20do%20I%20centering%20the%20pygame%20window%20on%20the%20screen?">"How do I centering the pygame window on the screen?"</a> above for more information.</p>
+
+<h4>What environment variables does Pygame/SDL recognize?</h4>
+
+<p>See <a href="#How%20do%20I%20center%20the%20pygame%20window%20on%20the%20screen?">"How do I center the pygame window on the screen?"</a> above.</p>
+
+<h3>Miscellaneous</h3>
+
+<h4>Does Pygame work with Python 3?</h4>
+<p>
+Yes. Pygame 1.9.2 supports Python 3.2 and up.
+Only the orphaned _movie module (not built by default) does not.
+</p>
+
+<h4>Why do the draw functions leave unfilled pixels (holes) in thick circles or arcs?</h4>
+
+<p><a href="FrequentlyAskedQuestions#Why does drawing thick circles or arcs give%20">See next question.</a></p>
+
+<h4>Why does drawing thick circles or arcs give "moire patterns"?</h4>
+<p>The <img style="color: white; border-style: none; margin: 10px; float: left" src="moire_circle.gif" alt="twilight" width="110" height="110" /> Pygame draw package uses a crude, aliasing, algorithm to draw single pixel width circles. Thicker circles are composed of multiple single pixel width circles. There is not much overlapping of circles so, regrettably, it leaves holes.</p>
+<p>Pygame 1.9.0 now includes the SDL_gfx package. This includes a filled-ellipse draw function so a thick circle can be built up from two concentric filled circles.</p>

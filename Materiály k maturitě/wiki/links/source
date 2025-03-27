@@ -1,0 +1,9 @@
+<ul>
+<li><a href="http://inventwithpython.com" rel="nofollow">Making Games with Python &amp; Pygame - A free Pygame book.</a> Includes several example games and explains how each one works. Assumes some knowledge of Python.
+</li><li><a href="http://pyopengl.sourceforge.net/" rel="nofollow">PyOpenGL</a> : If you want to do 3D through pygame, you'll need this excellent binding of OpenGL for Python.        
+</li><li><a href="http://wiki.python.org/moin/PythonGameLibraries" rel="nofollow"> Python Game Libraries:</a> A comprehensive list of game libraries available to Python coders.  Includes extensions to PyGame and PyOpenGL, as well as many other options.
+</li><li><a href="http://ithare.com/programming-guide-for-video-gamers/"> Game Development and Programming Guide:</a> - Learn about the different stages of game development and design, perfect for beginner programmers and young adults interested in learning game theory.
+</li><li><a href="http://wiki.python.org/moin/PythonSpeed/PerformanceTips" rel="nofollow"> Python Performance Tips:</a> - Skip Montenaro - Nov 2, 1999 A great list of ideas and specifics on how to keep your python code running its best.
+</li><li><a href="http://www-cs-students.stanford.edu/%7Eamitp/gameprog.html" rel="nofollow"> Amit's Game Programming Information:</a> - Amit Patel Various collection of links and articles discussing general game development situations. Pathfinding, object design, etc.
+</li><li><a href="http://web.cs.wpi.edu/%7Eclaypool/courses/frontiers-06/samples/pixel-artist/default.html" rel="nofollow"> So You Want to be a Pixel Artist:</a> - Tsugumo An excellent informational tutorial on how to create your own low color, low resolution game graphics. It starts with creating tiles and maps, all the way up to animated sprites.
+</li></ul>

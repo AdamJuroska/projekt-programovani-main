@@ -1,0 +1,21 @@
+<p>
+<b>Pygame</b> is a set of <a href="http://www.python.org">Python</a>
+modules designed for writing games. It is written on top
+of the excellent <a href="http://www.libsdl.org">SDL</a> library.
+This allows you to create fully featured games and multimedia
+programs in the python language.
+<b>Pygame</b> is highly portable and runs on nearly
+every platform and operating system.
+</p>
+
+<p>
+For a nice introduction to pygame, examine the <a href="/docs/tut/chimp/ChimpLineByLine.html">line-by-line chimp tutorial</a>, and the <a href="http://www.pygame.org/docs/tut/intro/intro.html">introduction for python programmers</a>.
+</p>
+
+<p>
+More information:
+</p><ul>
+<li><a href="http://www.pygame.org/readme.html">Readme</a> - Pygame Readme Information </li>
+<li><a href="http://www.pygame.org/install.html">Install</a> - Install Information</li>
+<li><a href="http://www.pygame.org/whatsnew.shtml">What's New</a> - Changelog</li>
+</ul>

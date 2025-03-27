@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+    
+    MacCompile - pygame wiki
+</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+      <style>
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+/*        word-break: break-all;
+        word-break: break-word;
+*/        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+
+/* Body */
+.dark-theme {
+  background-color: #222;
+  color: rgb(221, 221, 221);
+}
+
+/* Navbar */
+.dark-theme .navbar {
+  background-color: #333;
+  border-color: #080808;
+  color: #eee;
+  margin-bottom: 0;
+}
+
+.dark-theme .navbar-collapse {
+  border-color: #080808;
+}
+
+/* Navbar header */
+.dark-theme .navbar-header {
+  color: #eee;
+}
+
+
+/* Buttons */
+/* General Button Styling */
+.dark-theme .btn {
+  background-color: #343a40;
+  border-color: #6c757d;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  font-style: initial;
+}
+
+/* Primary Button Styling */
+.dark-theme .btn-primary {
+  color: rgb(47, 253, 47);  
+  border-color: rgb(47, 253, 47);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover State Styling */
+.dark-theme .btn:hover,
+.dark-theme .btn:focus {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+/* Active State Styling */
+.dark-theme .btn:active,
+.dark-theme .btn.active {
+  background-color: #32CD32;
+  border-color: #32CD32;
+  box-shadow: none;
+  font-style: initial;
+}
+
+/* Disabled State Styling */
+.dark-theme .btn:disabled,
+.dark-theme .btn[disabled] {
+  opacity: 0.65;
+}
+
+
+/* List groups */
+.dark-theme .list-group {
+  background-color: #333;
+  border-color: #080808;
+  color: #eee;
+  margin-bottom: 20px;
+}
+
+.dark-theme .list-group-item {
+  background-color: #333;
+  border-color: #080808;
+  color: #eee;
+  font-style: initial;
+}
+
+.dark-theme .list-group-item:hover,
+.dark-theme .list-group-item:focus {
+  background-color: #080808;
+  border-color: #080808;
+  color: #eee;
+}
+
+/* Panels */
+.dark-theme .panel {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  color: #333;
+}
+
+.dark-theme .panel-heading {
+  background-color: #e7e7e7;
+  border-color: #d3d3d3;
+  color: #333;
+}
+
+.dark-theme .panel-heading a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Press Start 2P', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: initial;
+}
+
+@media screen and (min-width: 768px) {
+  .dark-theme .panel-heading a {
+    
+    font-size: 30px;
+    line-height: 1;    
+  }
+}
+
+.dark-theme .h1, .dark-theme .h2, .dark-theme .h3, .dark-theme .h4, .dark-theme .h5, .dark-theme .h6, 
+.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5, .dark-theme h6 {
+  text-transform: uppercase;
+  font-family: 'Press Start 2P';
+}
+.dark-theme .h1, .dark-theme h1 {
+  text-shadow: -1px -1px 0 #0D2,
+               1px -1px 0 #000,
+               -1px 1px 0 #000,
+               1px 1px 0 #000;
+}
+
+.dark-theme .panel-default {
+  border-color: #080808;
+  background-color: #222;
+  color: #eee;
+}
+
+.dark-theme .panel-default > .panel-heading {
+  border-color: #080808;
+  background-color: #080808;
+  color: #eee;
+}
+
+.dark-theme .panel-default > .panel-heading + .panel-body {
+  border-top-color: #080808;
+}
+
+.dark-theme .panel-body {
+  color: #eee;
+}
+
+
+
+
+/* Forms */
+.dark-theme .form-control {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #555;
+}
+
+.dark-theme .form-control:focus {
+  border-color: #6bbf59;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.dark-theme .form-group {
+  margin-bottom: 15px;
+}
+
+.dark-theme .form-label {
+  color: #ccc;
+}
+
+.dark-theme .form-group.has-error .form-control {
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ebccd1;
+}
+
+.dark-theme .form-group.has-error .help-block {
+  color: #a94442;
+}
+
+/* Containers */
+.dark-theme .container,
+.dark-theme .container-fluid {
+  background-color: #222;
+  color: #eee;
+}
+
+
+/* Badges */
+.dark-theme .badge {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Footer */
+.dark-theme footer {
+  background-color: #222;
+  color: #eee;
+  padding: 10px;
+}
+
+
+/* Dropdowns */
+.dark-theme .dropdown-menu {
+  background-color: #222;
+  border-color: #080808;
+  color: #eee;
+}
+
+.dark-theme .dropdown-menu > li > a {
+  color: #eee;
+}
+
+.dark-theme .dropdown-menu > li > a:hover,
+.dark-theme .dropdown-menu > li > a:focus {
+  background-color: #080808;
+  color: #eee;
+}
+
+.dark-theme .dropdown-menu > li > a:focus {
+  outline: none;
+}
+
+.dark-theme .dropdown-menu > .active > a,
+.dark-theme .dropdown-menu > .active > a:hover,
+.dark-theme .dropdown-menu > .active > a:focus {
+  background-color: #080808;
+  color: #eee;
+  font-style: initial;
+}
+
+.dark-theme .dropdown-header {
+  color: #aaa;
+}
+
+.dark-theme .dropdown-backdrop {
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.dark-theme .open > .dropdown-toggle {
+  background-color: #080808;
+  color: #eee;
+  border-color: #080808;
+}
+
+.dark-theme .open > .dropdown-toggle:hover,
+.dark-theme .open > .dropdown-toggle:focus,
+.dark-theme .open > .dropdown-toggle:active {
+  background-color: #080808;
+  color: rgb(133, 255, 133);
+  border-color: #080808;
+}
+
+.dark-theme .navbar-default .navbar-nav>li>a {
+  color: #fff;
+  font-style: initial;
+}
+.dark-theme .navbar-default .navbar-nav>li>a:hover,
+.dark-theme .navbar-default .navbar-nav>li>a:focus {
+  color: rgb(133, 255, 133);
+}
+
+/* Navbar Dropdown */
+.dark-theme .navbar-default .navbar-nav>.open>a, 
+.dark-theme .navbar-default .navbar-nav>.open>a:focus, 
+.dark-theme .navbar-default .navbar-nav>.open>a:hover {
+  color: rgb(133, 255, 133);
+  background-color: #080808;
+  font-style: initial;
+}
+
+
+.dark-theme .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  background-color: #080808;
+  color: #eee;
+  font-style: initial;
+}
+.dark-theme .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+  color: rgb(133, 255, 133);
+  background-color: #080808;
+  font-style: initial;
+}
+
+.dark-theme pre {
+  background-color: #000;
+  color: #eee;
+}
+
+
+
+/* Modals */
+.dark-theme .modal-content {
+  background-color: #292b2c;
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.dark-theme .modal-header {
+  background-color: #222;
+  border-bottom: 1px solid #080808;
+  color: #fff;
+}
+
+.dark-theme .modal-title {
+  color: #fff;
+}
+
+.dark-theme .modal-body {
+  color: #fff;
+}
+
+.dark-theme .modal-footer {
+  background-color: #222;
+  border-top: 1px solid #080808;
+}
+
+
+
+
+/* Modal Header */
+.dark-theme button.close,
+.dark-theme .modal-header .close {
+  color: #fff;
+  opacity: 1;
+  text-shadow: none;
+}
+
+.dark-theme button.close:hover,
+.dark-theme .modal-header .close:hover,
+.dark-theme button.close:focus,
+.dark-theme .modal-header .close:focus {
+  color: #fff;
+  opacity: 0.5;
+  text-shadow: none;
+}
+
+.dark-theme .modal-header .close:hover span,
+.dark-theme .modal-header .close:focus span {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dark-theme a {
+  color: rgb(47, 253, 47);
+  /* text-shadow: 1px 1px 1px rgba(0, 255, 0, 0.1); */
+  font-style: oblique;
+}
+
+.dark-theme a:hover,
+.dark-theme a:focus,
+.dark-theme a:active {
+  color: rgb(133, 255, 133);
+}
+
+/* input */
+
+.dark-theme input[type="text"],
+.dark-theme input[type="password"],
+.dark-theme input[type="email"],
+.dark-theme input[type="url"],
+.dark-theme input[type="tel"],
+.dark-theme input[type="number"],
+.dark-theme input[type="search"],
+.dark-theme input[type="date"],
+.dark-theme input[type="month"],
+.dark-theme input[type="week"],
+.dark-theme input[type="time"],
+.dark-theme input[type="datetime"],
+.dark-theme input[type="datetime-local"],
+.dark-theme input[type="color"],
+.dark-theme input[type="submit"],
+.dark-theme select,
+.dark-theme textarea {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #555;
+}
+
+
+
+/**
+ *  Underline on hover.
+ *  - .underline-on-hover part that is hovered.
+ *  - .underline-on-hover-underline is the underlined part.
+ */
+.underline-on-hover:hover .underline-on-hover-underline::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.underline-on-hover-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.underline-on-hover-underline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #337ab7;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.8s ease-in-out;
+}
+.dark-theme .underline-on-hover-underline::before {
+  background-color: rgb(47, 253, 47);
+}
+
+      </style>
+  <style>
+    #toc-sidebar {max-width: 170px;}
+    .header_link {visibility:hidden; padding-left:5px;}
+    .wiki-heading:hover .header_link {visibility: visible;}
+    @media(max-width:768px){
+      #toc-sidebar {
+        max-width: inherit;
+      }
+    }
+    @media(min-width:780px){
+      #toc-sidebar {
+        position: fixed;
+        left: 20px;
+      }
+    }
+    .wiki-nav {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-top: 20px;
+      padding: 10px 15px;
+    }
+
+    .wiki-toc-nav .nav>li>a{
+      display:block;padding:4px 4px;font-size:13px;font-weight:500;color:#eee
+    }
+    .wiki-toc-nav .nav>li>a:focus,.wiki-toc-nav .nav>li>a:hover{
+      padding-left:3px;color:#32CD32;text-decoration:none;background-color:transparent;border-left:1px solid #32CD32
+    }
+    .wiki-toc-nav .nav>.active:focus>a,.wiki-toc-nav .nav>.active:hover>a,.wiki-toc-nav .nav>.active>a{
+      padding-left:2px;font-weight:700;color:#32CD32;background-color:transparent;border-left:2px solid #32CD32
+    }
+    .wiki-toc-nav .nav .nav{
+      padding-bottom:10px
+    }
+    .wiki-toc-nav .nav .nav>li>a{
+      padding-top:1px;padding-bottom:1px;padding-left:14px;font-size:12px;font-weight:400
+    }
+    .wiki-toc-nav .nav .nav>li>a:focus,.wiki-toc-nav .nav .nav>li>a:hover{
+      padding-left:13px
+    }
+    .wiki-toc-nav .nav .nav>.active:focus>a,.wiki-toc-nav .nav .nav>.active:hover>a,.wiki-toc-nav .nav .nav>.active>a{
+      padding-left:12px;font-weight:500
+    }
+    .wiki-toc-nav .nav>.active>ul{
+      display:block
+    }
+  </style>
+
+<link rel="alternate" type="application/atom+xml" title="pygame.org news (ATOM feed)" href="http://www.pygame.org/feed/news.php?format=ATOM"/>
+      <link rel="alternate" type="application/rss+xml" title="pygame.org news (RSS 2.0 feed)" href="http://www.pygame.org/feed/news.php?format=RSS2.0" />
+  </head>
+  <body class="dark-theme" >
+
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+    
+      
+        
+          <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#863d95661e9e873ab0a93f2f44c8902220c7b3e7" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="navbar-left hidden-xs" style="max-width:100px;margin-top: 18px;margin-right: 4px;">pip install</span>
+      <a class="navbar-left" href="/news" title="pygame">
+        <img alt="pygame logo" src="/images/logo_lofi.png" style="max-width:100px;margin-top: 10px;">
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="863d95661e9e873ab0a93f2f44c8902220c7b3e7">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Projects
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/tags/all">Projects</a>
+            </li>
+            <li>
+              <a href="/screenshots.html">Screenshots</a>
+            </li>
+            <li>
+              <a href="/comments/pygame">Project Comments</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/news.html">News</a>
+        </li>
+        <li>
+          <a href="/wiki/about">About</a>
+        </li>
+        <li>
+          <a href="/wiki/GettingStarted">Getting Started</a>
+        </li>
+        <li>
+          <a href="/docs">Docs</a>
+        </li>
+        <li class="dropdown">
+          <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Info
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/wiki/tutorials">Tutorials</a>
+            </li>
+            <li>
+              <a href="/wiki/FrequentlyAskedQuestions">Pygame FAQ</a>
+            </li>
+            <li>
+              <a href="/wiki/info">Help (irc, lists)</a>
+            </li>
+            <li>
+              <a href="/wiki/links">Links</a>
+            </li>
+            <li>
+              <a href="/whatsnew.shtml">What's New</a>
+            </li>
+            <li>
+              <a href="/wiki/">Wiki</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Development
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/wiki/patchesandbugs">Bugs &amp; Patches</a>
+            </li>
+            <li>
+              <a href="https://github.com/pygame/">pygame github organisation</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        
+      
+
+      <div class="container" id="content">
+        <div class="row row-offcanvas row-offcanvas-right">
+          <div class="col-xs-12 col-sm-9">
+          
+
+          
+  
+  
+  
+
+    <div class="row">
+      <div class="col-sm-3 wiki-toc-nav">
+        <div id="toc-sidebar">
+          
+            <nav class="wiki-toc-nav" id="toc"><ul class="nav"><li><a class="lih1" href="#Current%20Instructions">Current Instructions</a><ul class="nav"><li><a class="lih3" href="#With%20dependencies%20installed%20with%20homebrew">With dependencies installed with homebrew</a></li></ul></li><li><a class="lih1" href="#Legacy%20Instructions">Legacy Instructions</a><ul class="nav"><li><a class="lih3" href="#2017%20instructions">2017 instructions</a></li><li><a class="lih3" href="#Installing%20from%20source%20with%20homebrew">Installing from source with homebrew</a></li><li><a class="lih3" href="#Other%20instructions">Other instructions</a></li><li><a class="lih3" href="#Mountain%20Lion%20install%20instructions">Mountain Lion install instructions</a></li><li><a class="lih3" href="#Snow%20leopard%20install%20instructions.">Snow leopard install instructions.</a></li><li><a class="lih3" href="#download">download</a></li><li><a class="lih3" href="#Build%20and%20install">Build and install</a></li><li><a class="lih4" href="#Install%20the%20SDL%20Frameworks">Install the SDL Frameworks</a></li><li><a class="lih3" href="#Install%20pyobjc%20(non-Leopard%20only)">Install pyobjc (non-Leopard only)</a></li><li><a class="lih3" href="#Install%20Numeric">Install Numeric</a></li><li><a class="lih3" href="#Install%20Universal%20build%20libjpeg%20&amp;%20libpng">Install Universal build libjpeg &amp; libpng</a></li><li><a class="lih3" href="#Install%20libjpeg%20(from%20source)">Install libjpeg (from source)</a></li><li><a class="lih3" href="#Install%20libpng%20(from%20source)">Install libpng (from source)</a></li><li><a class="lih3" href="#Install%20pygame">Install pygame</a></li><li><a class="lih3" href="#pygame%20with%20sdl2">pygame with sdl2</a></li></ul></li></ul></nav>
+          
+
+          <nav class="wiki-nav">
+            <p>Wiki tools</p>
+            <a class="btn btn-default" href="/wiki/MacCompile/edit" role="button">Edit</a>
+            <a class="btn btn-default" href="/wiki/MacCompile/source" role="button">Source</a>
+            <a class="btn btn-default" href="/wiki/MacCompile/history" role="button">History</a><a class="btn btn-default" href="/wiki/recent" role="button">Recent Changes</a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <h1>MacCompile &mdash; <a href="/wiki">wiki</a></h1>
+        <div class="wiki-content">
+          <div><h1 class="wiki-heading" id="Current Instructions">Current Instructions<a class="header_link" href="#Current%20Instructions" title="Permalink to this definition">¶</a></h1>
+<p>These should work on both x86_64 and arm64 macs, running MacOS 10 and above</p>
+<h3 class="wiki-heading" id="With dependencies installed with homebrew">With dependencies installed with homebrew<a class="header_link" href="#With%20dependencies%20installed%20with%20homebrew" title="Permalink to this definition">¶</a></h3>
+<p>1. Install <a href="https://brew.sh" rel="nofollow">Homebrew</a> -- instructions found on link.<br /> Install the SDL dependencies:</p>
+<div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf pkg<span style="color: #666666;">-</span>config
+</pre></div>
+
+<p>2. Install XQuartz [Seems to be optional]</p>
+<div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>brew install Caskroom<span style="color: #666666;">/</span>cask<span style="color: #666666;">/</span>xquartz
+</pre></div>
+
+<p>3. Install portmidi <br /> This step is definitely optional, and may fail on your system (it fails on mine). If you don't run this, or it fails, pygame.midi won't work, which is fine for most people. (step 5, testing, will tell you if this worked or not).</p>
+<div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>brew install portmidi
+</pre></div>
+
+<p>4. Install latest Pygame from source</p>
+<div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>python3 <span style="color: #666666;">-</span>m pip install git<span style="color: #666666;">+</span>https:<span style="color: #666666;">//</span>github<span style="color: #666666;">.</span>com<span style="color: #666666;">/</span>pygame<span style="color: #666666;">/</span>pygame<span style="color: #666666;">.</span>git
+</pre></div>
+
+<p>5. verify all Pygame Tests</p>
+<pre>python3 -m pygame.tests</pre>
+<h1 class="wiki-heading" id="Legacy Instructions">Legacy Instructions<a class="header_link" href="#Legacy%20Instructions" title="Permalink to this definition">¶</a></h1>
+<h3 class="wiki-heading" id="2017 instructions">2017 instructions<a class="header_link" href="#2017%20instructions" title="Permalink to this definition">¶</a></h3>
+<p>Python3 and Pygame on macs can have a special setup. Try and follow the instructions <a href="http://stackoverflow.com/questions/42008679/cant-install-pygame-on-mac/42033710#42033710" rel="nofollow">on here</a>, if you have the newest macOS. Make sure to follow the instructions designated for Python3. If those instructions don't work, click the source link on that answer, which goes to an article made for older macs.</p>
+<h3 class="wiki-heading" id="Installing from source with homebrew">Installing from source with homebrew<a class="header_link" href="#Installing%20from%20source%20with%20homebrew" title="Permalink to this definition">¶</a></h3>
+<p><a href="https://brew.sh/" rel="nofollow">Homebrew</a> is a package manager that's very popular on Mac. We use that to get the dependencies for pygame.</p>
+<div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>brew upgrade sdl sdl_image sdl_mixer sdl_ttf portmidi
+python3<span style="color: #666666;">.6</span> <span style="color: #666666;">-</span>m venv anenv
+<span style="color: #666666;">.</span> <span style="color: #666666;">./</span>anenv<span style="color: #666666;">/</span><span style="color: #008000;">bin</span><span style="color: #666666;">/</span>activate
+pip install https:<span style="color: #666666;">//</span>github<span style="color: #666666;">.</span>com<span style="color: #666666;">/</span>pygame<span style="color: #666666;">/</span>pygame<span style="color: #666666;">/</span>archive<span style="color: #666666;">/</span>master<span style="color: #666666;">.</span>zip
+</pre></div>
+
+<p>If you want to install the last release, change the pip install part to:</p>
+<pre>pip install https://github.com/pygame/pygame/archive/1.9.4.zip</pre>
+<h3 class="wiki-heading" id="Other instructions">Other instructions<a class="header_link" href="#Other%20instructions" title="Permalink to this definition">¶</a></h3>
+<p>The following page details how to install PyGame 1.9.1 on a Mac OS X 10.6 (Snow Leopard) running the most recent 2.x version of Python (2.7.1).</p>
+<p>Here are some alternative methods for installing PyGame on osx:</p>
+<ul>
+<li>An alternative <a href="MacSVNCompile?parent=" rel="nofollow">method based on macports and SVN</a></li>
+<li>I recently installed <a href="http://programming.itcarlow.ie/pygame.html" rel="nofollow">PyGame 1.9.1 on Mac OS X 10.6 (Snow Leopard) running Python 3.1</a> - (instructions at the bottom of the page. Cheers, and good luck! (Paul Barry, Dec 2009).</li>
+<li>A method of <a href="MacLionCompile?parent=" rel="nofollow">installing pygame on Mac OS X 10.7 (Lion)</a></li>
+<li>Here's how I installed <a href="http://www.shodanproductions.com/forum/viewtopic.php?t=67&amp;p=272#p272" rel="nofollow">PyGame 1.9.1 on Mac OS X 10.6 (Snow Leopard) for Python 2.7.2</a>.</li>
+</ul>
+<h3 class="wiki-heading" id="Mountain Lion install instructions">Mountain Lion install instructions<a class="header_link" href="#Mountain%20Lion%20install%20instructions" title="Permalink to this definition">¶</a></h3>
+<pre>1. Installed python but using visual python version. This is based on python 2.7.x
+In my system this installs files under Applications and /Library/Frameworks/Python.framework
+
+http://www.vpython.org
+From this site:
+
+First, download and install the pure 32-bit Python, Python-2.7.3
+(VPython does not work with Mac 64-bit/32-bit Python, but this 32-bit version of Python works fine on 64-bit Macs)
+
+Second, download and install VPython-Mac-Py2.7-5.74
+
+This includes version 1.5.1 of numpy.
+
+The download of Python-2.7.3 is from the vpython site and designed to work with vpython.
+You can use the python installer from http://www.python.org. However, you will have to install numpy.
+You can get numpy from http://sourceforge.net/projects/numpy/files/
+
+2. Installed the SDL libraries from dmg
+http://www.libsdl.org/
+
+SDL  1.2.15
+SDL_mixer 1.2.12
+SDL_ttf  2.0.11
+SDL_image 1.2.12
+
+3. Installed the libjpeg and libpng libraries from dmg
+http://ethan.tira-thompson.com/Mac_OS_X_Ports.html
+
+libpng v1.5.4
+libjpeg 8c
+
+4. Installed Xcode 4.4 from Apple apps. Need to add command line tools.
+To do this start Xcode and go to Preferences under Xcode menu. Choose the Download tab and select Components.
+Then install the Command Line Tools.
+
+5. Installed XQuartz. Mountain Lion OS X no longer includes the X11 window system library.
+This is different from Lion OS X.
+http://xquartz.macosforge.org/landing/
+
+XQuartz-2.7.2.dmg
+
+6. Downloaded pygame tar file from 
+http://pygame.org/download.shtml
+
+pygame-1.9.1release.tar.gz 
+
+Decompressed and extracted to create directory pygame1.9.1release
+
+6. Before compilation of pygame:
+
+  a. SDL_x header files refer to SDL as &amp;ltSDL/SDL_yy.h&gt; However, a SDL directory is not under
+the include directory of SDL (SDL/Headers). To fix this in a simple way:
+
+    i. Went to directory
+          /Library/Frameworks/SDL.framework/Headers
+     then made a link as follows:
+          ln -s SDL ./
+
+7. Changed to the pygame directory (normally pygame1.9.1release). Then switched to the super user.
+However, you can use the sudo command instead.
+
+I set the following compilation flags
+
+export CC='/usr/bin/gcc'
+export CFLAGS='-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -I/opt/X11/include -arch i386'
+export LDFLAGS='-arch i386'
+export ARCHFLAGS='-arch i386'
+
+You must specify using the original location of X11. The mac does not have a ld.so.conf
+and apparently the links generated by XQuartz in /usr do not work correctly.
+
+8. Now execute:
+   python config.py
+This should find the SDL, jpeg, png, and numpy libraries
+
+   python setup.py build
+This will build in the directory before installing. It should complete with no errors.
+then
+   python setup.py install
+
+9. Confirmed that it worked:
+
+   Out of super user mode and in a terminal shell
+
+   python
+   and within python
+   import pygame
+
+   this gave no error and a simple pygame program ran fine.
+
+GAMercier 2012-08-05
+</pre>
+<h3 class="wiki-heading" id="Snow leopard install instructions.">Snow leopard install instructions.<a class="header_link" href="#Snow%20leopard%20install%20instructions." title="Permalink to this definition">¶</a></h3>
+<p>Set these environment flags before building...</p>
+<pre>export CC='/usr/bin/gcc-4.0' CFLAGS='-isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386'<br />export LDFLAGS='-arch i386' <br />export ARCHFLAGS='-arch i386'<br />
+</pre>
+<p>If you get this error:</p>
+<pre>/Developer/SDKs/MacOSX10.4u.sdk/usr/include/stdarg.h:4:25: error: stdarg.h: No such file or directory
+</pre>
+<p>This link has a solution: http://packetcloud.net/2009/09/22/installing-mysql-python-module-for-python-262-on-snow-leopard-using-xcode/</p>
+<h3 class="wiki-heading" id="download">download<a class="header_link" href="#download" title="Permalink to this definition">¶</a></h3>
+<p>first, get the following packages:</p>
+<ul>
+<li>The most recent PyGame from this site (currently 1.9.1): <a href="../download.shtml" rel="nofollow">http://pygame.org/download.shtml</a></li>
+<li>The most recent PyObjC, (currently 2.2) Try `easy_install pyobjc==2.2` in terminal or download from <a href="http://pyobjc.sourceforge.net/" rel="nofollow">the pyobjc site if that doesn't work</a> - (Not needed in Mac OSX 10.5 Leopard - pyobjc 2.0 comes preinstalled)</li>
+<li><a href="http://www.ijg.org/files/jpegsrc.v6b.tar.gz" rel="nofollow">http://www.ijg.org/files/jpegsrc.v6b.tar.gz</a> &lt;-- BROKEN LINK !! ??</li>
+<li><a href="http://downloads.sourceforge.net/numpy/Numeric-24.2.tar.gz" rel="nofollow">http://downloads.sourceforge.net/numpy/Numeric-24.2.tar.gz</a></li>
+<li><a href="http://downloads.sourceforge.net/libpng/libpng-1.2.16.tar.bz2" rel="nofollow">http://downloads.sourceforge.net/libpng/libpng-1.2.16.tar.bz2</a></li>
+</ul>
+<p>SDL frameworks</p>
+<ul>
+<li><a href="http://www.libsdl.org/release/SDL-1.2.13.dmg" rel="nofollow">http://www.libsdl.org/release/SDL-1.2.13.dmg</a></li>
+<li><a href="http://www.libsdl.org/projects/SDL_image/release/SDL_image-1.2.6.dmg" rel="nofollow">http://www.libsdl.org/projects/SDL_image/release/SDL_image-1.2.6.dmg</a></li>
+<li><a href="http://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.9.dmg" rel="nofollow">http://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.9.dmg</a></li>
+<li><a href="http://www.libsdl.org/projects/SDL_mixer/release/SDL_mixer-1.2.8.dmg" rel="nofollow">http://www.libsdl.org/projects/SDL_mixer/release/SDL_mixer-1.2.7.dmg</a></li>
+</ul>
+<p>Tested with the latest python 2.7.x (2.7.1) framework:</p>
+<ul>
+<li><a href="http://www.python.org/download/releases/" rel="nofollow">Most recent version here</a></li>
+</ul>
+<h3 class="wiki-heading" id="Build and install">Build and install<a class="header_link" href="#Build%20and%20install" title="Permalink to this definition">¶</a></h3>
+<h4 class="wiki-heading" id="Install the SDL Frameworks">Install the SDL Frameworks<a class="header_link" href="#Install%20the%20SDL%20Frameworks" title="Permalink to this definition">¶</a></h4>
+<p>Open the DMG files and read the included Readme files to determine what needs to be moved where. The normal process is to go to each opened volume (/Volumes/SDL_something) directory, and run the appropriate following command:</p>
+<p></p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>sudo cp <span style="color: #666666;">-</span>R SDL<span style="color: #666666;">.</span>framework <span style="color: #666666;">/</span>Library<span style="color: #666666;">/</span>Frameworks<span style="color: #666666;">/</span>SDL<span style="color: #666666;">.</span>framework 
+sudo cp <span style="color: #666666;">-</span>R SDL_image<span style="color: #666666;">.</span>framework <span style="color: #666666;">/</span>Library<span style="color: #666666;">/</span>Frameworks<span style="color: #666666;">/</span>SDL_image<span style="color: #666666;">.</span>framework 
+sudo cp <span style="color: #666666;">-</span>R SDL_ttf<span style="color: #666666;">.</span>framework <span style="color: #666666;">/</span>Library<span style="color: #666666;">/</span>Frameworks<span style="color: #666666;">/</span>SDL_ttf<span style="color: #666666;">.</span>framework 
+sudo cp <span style="color: #666666;">-</span>R SDL_mixer<span style="color: #666666;">.</span>framework <span style="color: #666666;">/</span>Library<span style="color: #666666;">/</span>Frameworks<span style="color: #666666;">/</span>SDL_mixer<span style="color: #666666;">.</span>framework
+</pre></div>
+
+<h3 class="wiki-heading" id="Install pyobjc (non-Leopard only)">Install pyobjc (non-Leopard only)<a class="header_link" href="#Install%20pyobjc%20(non-Leopard%20only)" title="Permalink to this definition">¶</a></h3>
+<p>Unpack the tgz </p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>tar xvzf pyobjc<span style="color: #666666;">-1.4.</span>tar<span style="color: #666666;">.</span>gz cd pyobjc<span style="color: #666666;">-1.4</span>
+</pre></div>
+ Build and install <div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>python setup<span style="color: #666666;">.</span>py bdist_mpkg <span style="color: #666666;">--</span><span style="color: #008000;">open</span>
+</pre></div>
+
+<h3 class="wiki-heading" id="Install Numeric">Install Numeric<a class="header_link" href="#Install%20Numeric" title="Permalink to this definition">¶</a></h3>
+<p>Unpack the tgz </p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>tar xvzf Numeric<span style="color: #666666;">-24.2.</span>tar<span style="color: #666666;">.</span>gz cd Numeric<span style="color: #666666;">-24.2</span>
+</pre></div>
+ In OSX Leopard, you will need to comment out three lines (152-154) in /Packages/RNG/Src/ranf.c <div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span><span style="color: #666666;">//</span><span style="color: #3D7B7B; font-style: italic;">#if !defined(__sgi) //      int gettimeofday(struct timeval *, struct timezone *); //#endif</span>
+</pre></div>
+ Build and install <div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>sudo python setup<span style="color: #666666;">.</span>py install
+</pre></div>
+
+<h3 class="wiki-heading" id="Install Universal build libjpeg &amp; libpng">Install Universal build libjpeg &amp; libpng<a class="header_link" href="#Install%20Universal%20build%20libjpeg%20&amp;%20libpng" title="Permalink to this definition">¶</a></h3>
+<p>pygame needs universal binaries to build right, but libpng and libjpeg sources don't build as universal binaries automatically... so you probably want to download the pre-built universal binaries for libpng &amp; jpeg from <a href="http://ethan.tira-thompson.com/Mac%20OS%20X%20Ports.html" rel="nofollow">ethan.tira-thompson.com</a>. However you probably don't want to build against the dylib's for libpng and libjpeg if you are making an installer or will be using py2app, because then your distribution's imageext.so will not work without your clients also installing the libjpeg and libpng pacakges.<br />Since the package above installs both dylib and .a versions to /usr/local/lib and the build process will use the dylib versions by default, this means you probably want to delete/rename the dylib versions</p>
+<p>Install the package</p>
+<p></p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>sudo rm <span style="color: #666666;">/</span>usr<span style="color: #666666;">/</span>local<span style="color: #666666;">/</span>lib<span style="color: #666666;">/</span>libpng<span style="color: #666666;">.</span>dylib sudo rm <span style="color: #666666;">/</span>usr<span style="color: #666666;">/</span>local<span style="color: #666666;">/</span>lib<span style="color: #666666;">/</span>libjpeg<span style="color: #666666;">.</span>dylib
+</pre></div>
+
+<h3 class="wiki-heading" id="Install libjpeg (from source)">Install libjpeg (from source)<a class="header_link" href="#Install%20libjpeg%20(from%20source)" title="Permalink to this definition">¶</a></h3>
+<p>Skip this step if you downloaded the pre-built universal binaries for libpng &amp; jpeg</p>
+<p>Unpack the tgz </p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>tar xvzf jpegsrc<span style="color: #666666;">.</span>v6b<span style="color: #666666;">.</span>tar<span style="color: #666666;">.</span>gz cd jpeg<span style="color: #666666;">-6</span>b
+</pre></div>
+ Build and install <div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span><span style="color: #666666;">./</span>configure make sudo make install<span style="color: #666666;">-</span>lib
+</pre></div>
+
+<h3 class="wiki-heading" id="Install libpng (from source)">Install libpng (from source)<a class="header_link" href="#Install%20libpng%20(from%20source)" title="Permalink to this definition">¶</a></h3>
+<p>Skip this step if you downloaded the pre-built universal binaries for libpng &amp; jpeg</p>
+<p>Unpack the tbz</p>
+<p></p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>tar xvjf libpng<span style="color: #666666;">-1.2.16.</span>tar<span style="color: #666666;">.</span>bz2 cd libpng<span style="color: #666666;">-1.2.16</span>
+</pre></div>
+
+<p>Build and install</p>
+<p></p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span><span style="color: #666666;">./</span>configure make sudo make install
+</pre></div>
+
+<h3 class="wiki-heading" id="Install pygame">Install pygame<a class="header_link" href="#Install%20pygame" title="Permalink to this definition">¶</a></h3>
+<p>Unpack the tgz</p>
+<p></p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>tar xvzf pygame<span style="color: #666666;">-1.8.0</span>rc3<span style="color: #666666;">.</span>tar<span style="color: #666666;">.</span>gz cd pygame<span style="color: #666666;">-1.8.0</span>rc3
+</pre></div>
+
+<p>Configure </p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>python config<span style="color: #666666;">.</span>py
+</pre></div>
+ The output should be:
+<p></p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>Using Darwin configuration<span style="color: #666666;">...</span>  
+Hunting dependencies<span style="color: #666666;">...</span> 
+Framework SDL found 
+Framework SDL_ttf found 
+Framework SDL_image found 
+Framework SDL_mixer found 
+Framework smpeg <span style="color: #AA22FF; font-weight: bold;">not</span> found 
+NUMERIC : found <span style="color: #666666;">24.2</span> 
+PNG     : found 
+JPEG    : found
+</pre></div>
+
+<p>Edit Setup and put a '#' at the start of the line: </p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic;">#scrap src/scrap.c $(SDL) $(X11)</span>
+</pre></div>
+ Build pygame <div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>python setup<span style="color: #666666;">.</span>py build
+</pre></div>
+ Install pygame <div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>sudo python setup<span style="color: #666666;">.</span>py install
+</pre></div>
+
+<h3 class="wiki-heading" id="pygame with sdl2">pygame with sdl2<a class="header_link" href="#pygame%20with%20sdl2" title="Permalink to this definition">¶</a></h3>
+<p>Experimental sdl2 support can be compiled in like so: </p><div class="highlight" style="background: #f8f8f8;"><pre style="line-height: 125%;"><span></span>brew install sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_net sdl2_ttf
+git clone https:<span style="color: #666666;">//</span>github<span style="color: #666666;">.</span>com<span style="color: #666666;">/</span>pygame<span style="color: #666666;">/</span>pygame<span style="color: #666666;">.</span>git
+cd pygame
+python setup<span style="color: #666666;">.</span>py <span style="color: #666666;">-</span>config <span style="color: #666666;">-</span>auto <span style="color: #666666;">-</span>sdl2
+python setup<span style="color: #666666;">.</span>py install
+</pre></div>
+</div>
+        </div>
+      </div>
+    </div>
+  
+
+        </div><!--/.col-xs-12.col-sm-9-->
+          <div class="col-xs-12 col-sm-3 sidebar-offcanvas" id="sidebar">
+          
+              
+              <div class="list-group">
+                
+                  <a class="list-group-item" href="https://www.pygame.org/register">New members signup</a>
+                  <a class="list-group-item" href="https://www.pygame.org/login">Log In</a>
+                
+              </div>
+              
+
+              
+
+              
+  
+  
+  
+
+  <style>
+    .project-title {
+      bottom:10px;
+    }
+    .project-releases .list-group-item {
+      min-height: 68px;
+    }
+    .project-releases span {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 2px 4px;
+    }
+
+    .dark-theme .project-title {
+      bottom: 10px;
+      color: #fff;
+    }
+    .dark-theme .project-releases .list-group-item {
+      min-height: 68px;
+      background-color: #444;
+      border-color: #333;
+    }
+    .dark-theme .project-releases .list-group-item a {
+      font-style: initial;
+    }
+    .dark-theme .project-releases span {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 2px 4px;
+      color: #333;
+    }
+</style>
+
+  <h2>Recent Releases</h2>
+  <div class="list-group project-releases">
+  <a href="/project/1698/8263"
+       class="list-group-item underline-on-hover"
+       title="&lt;p&gt;Space max is a type of space invaders&lt;/p&gt;">
+      <span class="project-released">
+        23 Mar, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/c298166fabad7f2278a6b1bb96f3cc15.png" alt="&lt;p&gt;Space max is a type of space invaders&lt;/p&gt;">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Spacemax - 8.3
+      </span>
+    </a>
+  <a href="/project/5667/8262"
+       class="list-group-item underline-on-hover"
+       title="Wrote a clone of brick breaker game. I also added powers. There are 5 levels as of now. There are unlimited lives.">
+      <span class="project-released">
+        16 Feb, 2025
+      </span>
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        PyBrickBreaker - 1.0
+      </span>
+    </a>
+  <a href="/project/5660/8261"
+       class="list-group-item underline-on-hover"
+       title="【Imperial Ambitions 3K】is a Three-Kingdoms-themed, turn-based strategy game written in Python. The current version features 8 playable factions, 25 unit types, 100+ recruitable generals with 100+ special attacks/skills, and a full campaign with diplomacy options, tech trees, and more!">
+      <span class="project-released">
+        7 Feb, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/a00db8aa7556a8ad1e4e216825a0935e.png" alt="【Imperial Ambitions 3K】is a Three-Kingdoms-themed, turn-based strategy game written in Python. The current version features 8 playable factions, 25 unit types, 100+ recruitable generals with 100+ special attacks/skills, and a full campaign with diplomacy options, tech trees, and more!">
+      <span class="project-title dont-break-out underline-on-hover-underline" style=position:inherit;bottom:auto>
+        Imperial Ambitions - Three Kingdoms - Beta 1.1
+      </span>
+    </a>
+  <a href="/project/1305/8260"
+       class="list-group-item underline-on-hover"
+       title="Free side-scrolling team action game.">
+      <span class="project-released">
+        5 Feb, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/7d83ba921016f6ddeffaacd5f2144b2a.png" alt="Free side-scrolling team action game.">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Trosnoth - 1.21.0
+      </span>
+    </a>
+  <a href="/project/5157/8259"
+       class="list-group-item underline-on-hover"
+       title="A usable pixel art program written in Python">
+      <span class="project-released">
+        30 Jan, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/f164bc95f7be5394e1cc9826ecfc35d5.png" alt="A usable pixel art program written in Python">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        PyDPainter - Release 2.1.0
+      </span>
+    </a>
+  <a href="/project/5666/8258"
+       class="list-group-item underline-on-hover"
+       title="A pacman clone made with python and pygame">
+      <span class="project-released">
+        23 Jan, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/f4ad48699fc63a04bf1807cc9a571343.png" alt="A pacman clone made with python and pygame">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Pacman clone - 1.0
+      </span>
+    </a>
+  <a href="/project/3973/8257"
+       class="list-group-item underline-on-hover"
+       title="a multiplayer using tcp/ip sockets">
+      <span class="project-released">
+        6 Jan, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/5dbf151ef8661dc5a53c7c8bf0cee7b3.png" alt="a multiplayer using tcp/ip sockets">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        BattleTanks - 2.0
+      </span>
+    </a>
+  <a href="/project/4586/8256"
+       class="list-group-item underline-on-hover"
+       title="Full-featured game console based on pygame that can be integrated in your python game in order to execute python command/scripts/custom in-gamefunctions">
+      <span class="project-released">
+        29 Nov, 2024
+      </span>
+      <img class="img-responsive" src="/thumb/e59b8212cc7124061b17762d4e7459ac.png" alt="Full-featured game console based on pygame that can be integrated in your python game in order to execute python command/scripts/custom in-gamefunctions">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Pygame Game Console - 2.0
+      </span>
+    </a>
+  <a href="/project/5665/8255"
+       class="list-group-item underline-on-hover"
+       title="dice + plinko ">
+      <span class="project-released">
+        14 Nov, 2024
+      </span>
+      <img class="img-responsive" src="/thumb/3b5469bcd0748b7d12966e5561d2c360.png" alt="dice + plinko ">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Diechinko - .01
+      </span>
+    </a>
+  <a href="/project/5664/8254"
+       class="list-group-item underline-on-hover"
+       title="I don&#39;t see many use pygame for purposes other than game development so here it is with another example. Elden RIng fan videos and game made using pure pygame and python.">
+      <span class="project-released">
+        13 Nov, 2024
+      </span>
+      <img class="img-responsive" src="/thumb/227c699844d17d0b125f9c40c722b03a.png" alt="I don&#39;t see many use pygame for purposes other than game development so here it is with another example. Elden RIng fan videos and game made using pure pygame and python.">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Pygame for animated story - 1
+      </span>
+    </a>
+  </div>
+
+
+  <div>
+  <a href='/tags/pygame' class="btn btn-default" role="button">pygame <span class="badge">844</span></a>
+  <a href='/tags/2d' class="btn btn-default" role="button">2d <span class="badge">783</span></a>
+  <a href='/tags/arcade' class="btn btn-default" role="button">arcade <span class="badge">744</span></a>
+  <a href='/tags/game' class="btn btn-default" role="button">game <span class="badge">397</span></a>
+  <a href='/tags/python' class="btn btn-default" role="button">python <span class="badge">342</span></a>
+  <a href='/tags/puzzle' class="btn btn-default" role="button">puzzle <span class="badge">341</span></a>
+  <a href='/tags/shooter' class="btn btn-default" role="button">shooter <span class="badge">268</span></a>
+  <a href='/tags/strategy' class="btn btn-default" role="button">strategy <span class="badge">257</span></a>
+  <a href='/tags/action' class="btn btn-default" role="button">action <span class="badge">222</span></a>
+  <a href='/tags/space' class="btn btn-default" role="button">space <span class="badge">153</span></a>
+  <a href='/tags/other' class="btn btn-default" role="button">other <span class="badge">152</span></a>
+  <a href='/tags/libraries' class="btn btn-default" role="button">libraries <span class="badge">151</span></a>
+  <a href='/tags/simple' class="btn btn-default" role="button">simple <span class="badge">143</span></a>
+  <a href='/tags/platformer' class="btn btn-default" role="button">platformer <span class="badge">138</span></a>
+  <a href='/tags/multiplayer' class="btn btn-default" role="button">multiplayer <span class="badge">127</span></a>
+  <a href='/tags/rpg' class="btn btn-default" role="button">rpg <span class="badge">118</span></a>
+  <a href='/tags/retro' class="btn btn-default" role="button">retro <span class="badge">98</span></a>
+  <a href='/tags/applications' class="btn btn-default" role="button">applications <span class="badge">93</span></a>
+  <a href='/tags/3d' class="btn btn-default" role="button">3d <span class="badge">87</span></a>
+  <a href='/tags/gpl' class="btn btn-default" role="button">gpl <span class="badge">82</span></a>
+  <a href='/tags/pyopengl' class="btn btn-default" role="button">pyopengl <span class="badge">74</span></a>
+  <a href='/tags/snake' class="btn btn-default" role="button">snake <span class="badge">72</span></a>
+  <a href='/tags/pyweek' class="btn btn-default" role="button">pyweek <span class="badge">71</span></a>
+  <a href='/tags/geometrian' class="btn btn-default" role="button">geometrian <span class="badge">68</span></a>
+  <a href='/tags/library' class="btn btn-default" role="button">library <span class="badge">66</span></a>
+  <a href='/tags/gui' class="btn btn-default" role="button">gui <span class="badge">63</span></a>
+  <a href='/tags/physics' class="btn btn-default" role="button">physics <span class="badge">62</span></a>
+  <a href='/tags/engine' class="btn btn-default" role="button">engine <span class="badge">59</span></a>
+  <a href='/tags/simulation' class="btn btn-default" role="button">simulation <span class="badge">55</span></a>
+  <a href='/tags/adventure' class="btn btn-default" role="button">adventure <span class="badge">52</span></a>
+  <br/><br/>
+    <a href='/tags' class="btn btn-default" role="button">ALL the tags!</a>
+  </div>
+
+
+            
+          </div><!--/.sidebar-offcanvas-->
+        </div><!--/row-->
+        <hr>
+        <footer>
+          <p></p>
+        </footer>
+      </div><!--/.container-->
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

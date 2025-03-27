@@ -1,0 +1,37 @@
+<p>Welcome, and thanks for thinking about submitting an 'issue' (or bug reports as they're known for some reason).</p>
+<p>Please see the [[Contribute]] page if you want to get involved.</p>
+
+
+<h2>Issue tracker</h2>
+Issue tracker can be found here:
+<a href="https://github.com/pygame/pygame/issues">https://github.com/pygame/pygame/issues</a>
+
+<h2>OS/Distribution bug trackers for pygame</h2>
+<p>These are the pygame bug trackers run by other groups - like debian.</p>
+<table border="0">
+<tbody>
+<tr>
+<td>debian
+<td><a href="http://packages.qa.debian.org/p/pygame.html">http://packages.qa.debian.org/p/pygame.html</a>
+
+<tr>
+<td>ubuntu
+<td><a href="https://bugs.launchpad.net/ubuntu/+source/pygame">https://bugs.launchpad.net/ubuntu/+source/pygame</a>
+
+<tr>
+<td>gentoo
+<td><a href="http://bugs.gentoo.org/buglist.cgi?quicksearch=pygame">http://bugs.gentoo.org/buglist.cgi?quicksearch=pygame</a>
+
+<tr>
+<td>suse
+<td><a href="https://bugzilla.novell.com/buglist.cgi?query_format=specific&amp;order=relevance+desc&amp;bug_status=__open__&amp;product=&amp;content=pygame">suse pygame bug tracker</a>
+
+<tr>
+<td>redhat
+<td><a href="https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&amp;bug_status=VERIFIED&amp;bug_status=ASSIGNED&amp;bug_status=MODIFIED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;bug_status=ON_DEV&amp;bug_status=ON_QA&amp;bug_status=FAILS_QA&amp;bug_status=POST&amp;bug_status=RELEASE_PENDING&amp;field0-0-0=product&amp;type0-0-0=substring&amp;value0-0-0=pygame&amp;field0-0-1=component&amp;type0-0-1=substring&amp;value0-0-1=pygame&amp;field0-0-2=short_desc&amp;type0-0-2=substring&amp;value0-0-2=pygame&amp;field0-0-3=status_whiteboard&amp;type0-0-3=substring&amp;value0-0-3=pygame">redhat pygame bug tracker</a>
+
+<tr>
+<td>maemo
+<td><a href="https://bugs.maemo.org/buglist.cgi?quicksearch=pygame">maemo pygame bug tracker</a>
+</tbody>
+</table>

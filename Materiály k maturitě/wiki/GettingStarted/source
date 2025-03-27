@@ -1,0 +1,88 @@
+<h2>Pygame Installation</h2>
+<p>Pygame requires Python; if you don't already have it, you can download it from <a href="https://www.python.org/">python.org</a>. It's recommended to run the latest python version, because it's usually faster and has better features than the older ones. Bear in mind that pygame has dropped support for python 2.</p>
+<p>The best way to install pygame is with the <a href="https://pip.pypa.io/en/stable/">pip</a> tool (which is what python uses to install packages). Note, this comes with python in recent versions. We use the --user flag to tell it to install into the home directory, rather than globally. <code>python3 -m pip install -U pygame --user</code></p>
+<p>To see if it works, run one of the included examples: <code>python3 -m pygame.examples.aliens</code> If it works, you are ready to go! If not there are more detailed, platform-specific instructions further down the page.</p>
+<h2>Next steps...</h2>
+<p>You could try:</p>
+<ul>
+<li>Having a go at one of the [[tutorials]].</li>
+<li>Or dive right into the pygame <a href="../../docs/">Docs</a></li>
+</ul>
+<p><br /><br /></p>
+<hr />
+<h3>Further info on installation</h3>
+<p>Hopefully the installation instructions above worked for you. If not, please read some alternative installation methods, and extra details below.</p>
+<p><a title="Wheels are the new standard of python package files" href="http://pythonwheels.com/">Wheels</a> are available for x86 and x64 architectures on Linux and Windows, and for x64 and arm64 on Mac. If pip doesn't find a wheel for your platform, it will try to compile pygame from source (see below).</p>
+<p>pygame requires a "newer" pip. If pygame starts compiling from source and fails, <strong>first try <a href="https://pip.pypa.io/en/stable/installing/#upgrading-pip">upgrading pip</a>.</strong></p>
+<h3>Raspberry Pi</h3>
+<p>This comes with pygame already installed on the default raspbian installation. However, it's an ancient version. Get a newer pygame...</p>
+
+<p><code>python3 -m pip install -U pygame --user</code></p>
+
+<h3>Windows installation</h3>
+<p>Make sure you install python with the "Add python to PATH" option selected. This means that python, and pip will work for you from the command line.</p>
+<p>There is documentation with python for the "<a href="https://docs.python.org/3/using/windows.html#installation-steps">windows installation steps</a>"</p>
+<p><code>py -m pip install -U pygame --user</code> <code>py -m pygame.examples.aliens</code> If you get 'PermissionError: [WinError 5] Access is denied', before starting the command prompt right click and "Run as administrator".</p>
+<h3>Mac installation</h3>
+<h4>Recent versions of Mac OS X require pygame 2</h4>
+<p>If your examples aren't running and you are using a recent version of Mac OS X; try this line to install pygame instead:</p>
+<p><code>python3 -m pip install -U pygame --user</code></p>
+<h4>Anaconda Mac</h4>
+<p>Use</p>
+<pre>pythonw</pre>
+<p>instead of</p>
+<pre>python</pre>
+<p>(note the w on the end). If it doesn't work for you, please see the <a href="../MacCompile">/wiki/MacCompile</a> instructions.</p>
+<h3>Unix Binary Packages</h3>
+<p>Many Linux and BSD distributions have their own packages of Pygame. These may have an older version of Pygame than the wheels, but have been carefully tested with other packages in that distribution.</p>
+<h4>Debian/Ubuntu/Mint</h4>
+<p><code>sudo apt-get install python3-pygame</code> <code>python3 -m pygame.examples.aliens</code></p>
+<h4>Fedora/Red hat</h4>
+<p><code>sudo yum install python3-pygame</code> <code>python3 -m pygame.examples.aliens</code></p>
+<h4>OpenSUSE</h4>
+<p><code>sudo zypper install python3-pygame</code></p>
+<p><strong>Arch/Manjaro</strong></p>
+<p><code>sudo pamac install python-pygame</code> <code>python -m pygame.examples.aliens</code></p>
+<p><code></code></p>
+<table>
+<tbody>
+<tr>
+<th>Distribution</th>
+<th>Python 3 package</th>
+<td>Debian/Ubuntu</td>
+<td>python3-pygame</td>
+<td>Fedora</td>
+<td>python3-pygame</td>
+</tr>
+</tbody>
+</table>
+<p>FreeBSD also has an active pygame package. While techinicaly it isn't binary, it is automatically built and installed by the ports manager. See the FreeBSD package page for more information. <a href="http://www.freebsdports.info/ports/devel/py-game.html">http://www.freebsdports.info/ports/devel/py-game.html</a></p>
+<p>Gentoo has a builtin package for pygame. This is compiled for your system as it installs, similar to BSD, <a href="http://packages.gentoo.org/package/dev-python/pygame">http://packages.gentoo.org/package/dev-python/pygame</a></p>
+<hr />
+<p>&nbsp;</p>
+<h3>Installing From Source</h3>
+<h4>Compilation</h4>
+<p>Compiling and installing pygame is handled by Python's distutils. Pygame also comes with some scripts to automatically configure the flags needed to build pygame. Use the "setup.py" script to start the installation.</p>
+<p>The first time you run the setup script, it will call the "<tt>config.py</tt>" script. This will build a "<tt>Setup</tt>" file which stores all the information needed to compile. The "config.py" will do a good job of detecting what dependencies are available and where they are located. If it isn't perfect, it is easy to build your own, or edit the created "<tt>Setup</tt>" text file. This "<tt>Setup</tt>" file is a simple Makefile-like text file. It defines variables needed to use each dependency, and then enables all the pygame modules with found dependencies. If you have trouble compiling, you should be able to easily fix any problems inside the "<tt>Setup</tt>" file.</p>
+<p>Running the "<tt>setup.py</tt>" script will call distutils to build and install the pygame package. Distutils actually supports a wide variety of compile and install options. running "<tt>python setup.py help</tt>" will start to show you the different options available. You can change many things like install locations, compiler to use, and more. Calling the "setup.py" script with no arguments and it will just ask you if you want the default flags needed to compile and install.</p>
+<p>Some of the .c files are generated by <a href="https://cython.org/">Cython</a> from .pyx files. Running "<tt>setup.py cython</tt>" will update them.</p>
+<p><big><strong><u>Windows Compiling Info</u></strong></big></p>
+<blockquote>
+<p>You can compile pygame on windows with mingw (gcc for windows) and also with visual studio. Up to date details can be found here: [[CompileWindows]]</p>
+</blockquote>
+<p><br /> <big><strong><u>Unix Compiling Info</u></strong></big></p>
+<blockquote>
+<p>Compiling from linux shouldn't give you any problems. One thing you must keep in mind is that most linux RPM packages separate the actual library from the "<tt>dev</tt>" files needed to compile. To build you will need to make sure the packages like "<tt>SDL-dev</tt>" are installed.</p>
+<p>&nbsp;</p>
+You can check to see if SDL is ready to be built from by running the command <tt>sdl-config</tt> and seeing if it is found. If the <tt>sdl-config</tt> script is not on the path (or you have more than one?) Set the environment variable <tt>SDL_CONFIG</tt> to its location.
+<p>Sometimes you will have the SDL libraries installed in once location, and the other SDL libraries in another. This tricks the pygame config scripts, but you can help it out by setting the environment <tt>LOCALBASE</tt> to a path prefix where the other libraries are. The common case for this is SDL installed in /usr and other SDL libs installed in /usr/local. The command for this situation is "<tt>LOCALBASE=/usr/local python setup.py install</tt>".</p>
+</blockquote>
+<p>&nbsp;</p>
+<h3>Mac OS X Compiling Info</h3>
+<p>Up to date instructions for compiling on Mac OS X can be found here: [[MacCompile]]</p>
+<p>&nbsp;</p>
+<h4>if anaconda is installed</h4>
+<p>please deactivate base by:</p>
+<p><code>conda deactivate </code></p>
+<p>then :</p>
+<p><code>python3 -m pygame.examples.aliens</code></p>

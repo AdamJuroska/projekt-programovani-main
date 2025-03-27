@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+    
+    Help (irc, lists) - pygame wiki
+</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+      <style>
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+/*        word-break: break-all;
+        word-break: break-word;
+*/        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+
+/* Body */
+.dark-theme {
+  background-color: #222;
+  color: rgb(221, 221, 221);
+}
+
+/* Navbar */
+.dark-theme .navbar {
+  background-color: #333;
+  border-color: #080808;
+  color: #eee;
+  margin-bottom: 0;
+}
+
+.dark-theme .navbar-collapse {
+  border-color: #080808;
+}
+
+/* Navbar header */
+.dark-theme .navbar-header {
+  color: #eee;
+}
+
+
+/* Buttons */
+/* General Button Styling */
+.dark-theme .btn {
+  background-color: #343a40;
+  border-color: #6c757d;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  font-style: initial;
+}
+
+/* Primary Button Styling */
+.dark-theme .btn-primary {
+  color: rgb(47, 253, 47);  
+  border-color: rgb(47, 253, 47);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover State Styling */
+.dark-theme .btn:hover,
+.dark-theme .btn:focus {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+/* Active State Styling */
+.dark-theme .btn:active,
+.dark-theme .btn.active {
+  background-color: #32CD32;
+  border-color: #32CD32;
+  box-shadow: none;
+  font-style: initial;
+}
+
+/* Disabled State Styling */
+.dark-theme .btn:disabled,
+.dark-theme .btn[disabled] {
+  opacity: 0.65;
+}
+
+
+/* List groups */
+.dark-theme .list-group {
+  background-color: #333;
+  border-color: #080808;
+  color: #eee;
+  margin-bottom: 20px;
+}
+
+.dark-theme .list-group-item {
+  background-color: #333;
+  border-color: #080808;
+  color: #eee;
+  font-style: initial;
+}
+
+.dark-theme .list-group-item:hover,
+.dark-theme .list-group-item:focus {
+  background-color: #080808;
+  border-color: #080808;
+  color: #eee;
+}
+
+/* Panels */
+.dark-theme .panel {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  color: #333;
+}
+
+.dark-theme .panel-heading {
+  background-color: #e7e7e7;
+  border-color: #d3d3d3;
+  color: #333;
+}
+
+.dark-theme .panel-heading a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Press Start 2P', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: initial;
+}
+
+@media screen and (min-width: 768px) {
+  .dark-theme .panel-heading a {
+    
+    font-size: 30px;
+    line-height: 1;    
+  }
+}
+
+.dark-theme .h1, .dark-theme .h2, .dark-theme .h3, .dark-theme .h4, .dark-theme .h5, .dark-theme .h6, 
+.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5, .dark-theme h6 {
+  text-transform: uppercase;
+  font-family: 'Press Start 2P';
+}
+.dark-theme .h1, .dark-theme h1 {
+  text-shadow: -1px -1px 0 #0D2,
+               1px -1px 0 #000,
+               -1px 1px 0 #000,
+               1px 1px 0 #000;
+}
+
+.dark-theme .panel-default {
+  border-color: #080808;
+  background-color: #222;
+  color: #eee;
+}
+
+.dark-theme .panel-default > .panel-heading {
+  border-color: #080808;
+  background-color: #080808;
+  color: #eee;
+}
+
+.dark-theme .panel-default > .panel-heading + .panel-body {
+  border-top-color: #080808;
+}
+
+.dark-theme .panel-body {
+  color: #eee;
+}
+
+
+
+
+/* Forms */
+.dark-theme .form-control {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #555;
+}
+
+.dark-theme .form-control:focus {
+  border-color: #6bbf59;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.dark-theme .form-group {
+  margin-bottom: 15px;
+}
+
+.dark-theme .form-label {
+  color: #ccc;
+}
+
+.dark-theme .form-group.has-error .form-control {
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ebccd1;
+}
+
+.dark-theme .form-group.has-error .help-block {
+  color: #a94442;
+}
+
+/* Containers */
+.dark-theme .container,
+.dark-theme .container-fluid {
+  background-color: #222;
+  color: #eee;
+}
+
+
+/* Badges */
+.dark-theme .badge {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Footer */
+.dark-theme footer {
+  background-color: #222;
+  color: #eee;
+  padding: 10px;
+}
+
+
+/* Dropdowns */
+.dark-theme .dropdown-menu {
+  background-color: #222;
+  border-color: #080808;
+  color: #eee;
+}
+
+.dark-theme .dropdown-menu > li > a {
+  color: #eee;
+}
+
+.dark-theme .dropdown-menu > li > a:hover,
+.dark-theme .dropdown-menu > li > a:focus {
+  background-color: #080808;
+  color: #eee;
+}
+
+.dark-theme .dropdown-menu > li > a:focus {
+  outline: none;
+}
+
+.dark-theme .dropdown-menu > .active > a,
+.dark-theme .dropdown-menu > .active > a:hover,
+.dark-theme .dropdown-menu > .active > a:focus {
+  background-color: #080808;
+  color: #eee;
+  font-style: initial;
+}
+
+.dark-theme .dropdown-header {
+  color: #aaa;
+}
+
+.dark-theme .dropdown-backdrop {
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.dark-theme .open > .dropdown-toggle {
+  background-color: #080808;
+  color: #eee;
+  border-color: #080808;
+}
+
+.dark-theme .open > .dropdown-toggle:hover,
+.dark-theme .open > .dropdown-toggle:focus,
+.dark-theme .open > .dropdown-toggle:active {
+  background-color: #080808;
+  color: rgb(133, 255, 133);
+  border-color: #080808;
+}
+
+.dark-theme .navbar-default .navbar-nav>li>a {
+  color: #fff;
+  font-style: initial;
+}
+.dark-theme .navbar-default .navbar-nav>li>a:hover,
+.dark-theme .navbar-default .navbar-nav>li>a:focus {
+  color: rgb(133, 255, 133);
+}
+
+/* Navbar Dropdown */
+.dark-theme .navbar-default .navbar-nav>.open>a, 
+.dark-theme .navbar-default .navbar-nav>.open>a:focus, 
+.dark-theme .navbar-default .navbar-nav>.open>a:hover {
+  color: rgb(133, 255, 133);
+  background-color: #080808;
+  font-style: initial;
+}
+
+
+.dark-theme .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  background-color: #080808;
+  color: #eee;
+  font-style: initial;
+}
+.dark-theme .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+  color: rgb(133, 255, 133);
+  background-color: #080808;
+  font-style: initial;
+}
+
+.dark-theme pre {
+  background-color: #000;
+  color: #eee;
+}
+
+
+
+/* Modals */
+.dark-theme .modal-content {
+  background-color: #292b2c;
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.dark-theme .modal-header {
+  background-color: #222;
+  border-bottom: 1px solid #080808;
+  color: #fff;
+}
+
+.dark-theme .modal-title {
+  color: #fff;
+}
+
+.dark-theme .modal-body {
+  color: #fff;
+}
+
+.dark-theme .modal-footer {
+  background-color: #222;
+  border-top: 1px solid #080808;
+}
+
+
+
+
+/* Modal Header */
+.dark-theme button.close,
+.dark-theme .modal-header .close {
+  color: #fff;
+  opacity: 1;
+  text-shadow: none;
+}
+
+.dark-theme button.close:hover,
+.dark-theme .modal-header .close:hover,
+.dark-theme button.close:focus,
+.dark-theme .modal-header .close:focus {
+  color: #fff;
+  opacity: 0.5;
+  text-shadow: none;
+}
+
+.dark-theme .modal-header .close:hover span,
+.dark-theme .modal-header .close:focus span {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dark-theme a {
+  color: rgb(47, 253, 47);
+  /* text-shadow: 1px 1px 1px rgba(0, 255, 0, 0.1); */
+  font-style: oblique;
+}
+
+.dark-theme a:hover,
+.dark-theme a:focus,
+.dark-theme a:active {
+  color: rgb(133, 255, 133);
+}
+
+/* input */
+
+.dark-theme input[type="text"],
+.dark-theme input[type="password"],
+.dark-theme input[type="email"],
+.dark-theme input[type="url"],
+.dark-theme input[type="tel"],
+.dark-theme input[type="number"],
+.dark-theme input[type="search"],
+.dark-theme input[type="date"],
+.dark-theme input[type="month"],
+.dark-theme input[type="week"],
+.dark-theme input[type="time"],
+.dark-theme input[type="datetime"],
+.dark-theme input[type="datetime-local"],
+.dark-theme input[type="color"],
+.dark-theme input[type="submit"],
+.dark-theme select,
+.dark-theme textarea {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #555;
+}
+
+
+
+/**
+ *  Underline on hover.
+ *  - .underline-on-hover part that is hovered.
+ *  - .underline-on-hover-underline is the underlined part.
+ */
+.underline-on-hover:hover .underline-on-hover-underline::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.underline-on-hover-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.underline-on-hover-underline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #337ab7;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.8s ease-in-out;
+}
+.dark-theme .underline-on-hover-underline::before {
+  background-color: rgb(47, 253, 47);
+}
+
+      </style>
+  <style>
+    #toc-sidebar {max-width: 170px;}
+    .header_link {visibility:hidden; padding-left:5px;}
+    .wiki-heading:hover .header_link {visibility: visible;}
+    @media(max-width:768px){
+      #toc-sidebar {
+        max-width: inherit;
+      }
+    }
+    @media(min-width:780px){
+      #toc-sidebar {
+        position: fixed;
+        left: 20px;
+      }
+    }
+    .wiki-nav {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-top: 20px;
+      padding: 10px 15px;
+    }
+
+    .wiki-toc-nav .nav>li>a{
+      display:block;padding:4px 4px;font-size:13px;font-weight:500;color:#eee
+    }
+    .wiki-toc-nav .nav>li>a:focus,.wiki-toc-nav .nav>li>a:hover{
+      padding-left:3px;color:#32CD32;text-decoration:none;background-color:transparent;border-left:1px solid #32CD32
+    }
+    .wiki-toc-nav .nav>.active:focus>a,.wiki-toc-nav .nav>.active:hover>a,.wiki-toc-nav .nav>.active>a{
+      padding-left:2px;font-weight:700;color:#32CD32;background-color:transparent;border-left:2px solid #32CD32
+    }
+    .wiki-toc-nav .nav .nav{
+      padding-bottom:10px
+    }
+    .wiki-toc-nav .nav .nav>li>a{
+      padding-top:1px;padding-bottom:1px;padding-left:14px;font-size:12px;font-weight:400
+    }
+    .wiki-toc-nav .nav .nav>li>a:focus,.wiki-toc-nav .nav .nav>li>a:hover{
+      padding-left:13px
+    }
+    .wiki-toc-nav .nav .nav>.active:focus>a,.wiki-toc-nav .nav .nav>.active:hover>a,.wiki-toc-nav .nav .nav>.active>a{
+      padding-left:12px;font-weight:500
+    }
+    .wiki-toc-nav .nav>.active>ul{
+      display:block
+    }
+  </style>
+
+<link rel="alternate" type="application/atom+xml" title="pygame.org news (ATOM feed)" href="http://www.pygame.org/feed/news.php?format=ATOM"/>
+      <link rel="alternate" type="application/rss+xml" title="pygame.org news (RSS 2.0 feed)" href="http://www.pygame.org/feed/news.php?format=RSS2.0" />
+  </head>
+  <body class="dark-theme" >
+
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+    
+      
+        
+          <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#62837755ac086a9acfa97c77a62a5b36e0488c4c" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="navbar-left hidden-xs" style="max-width:100px;margin-top: 18px;margin-right: 4px;">pip install</span>
+      <a class="navbar-left" href="/news" title="pygame">
+        <img alt="pygame logo" src="/images/logo_lofi.png" style="max-width:100px;margin-top: 10px;">
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="62837755ac086a9acfa97c77a62a5b36e0488c4c">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Projects
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/tags/all">Projects</a>
+            </li>
+            <li>
+              <a href="/screenshots.html">Screenshots</a>
+            </li>
+            <li>
+              <a href="/comments/pygame">Project Comments</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/news.html">News</a>
+        </li>
+        <li>
+          <a href="/wiki/about">About</a>
+        </li>
+        <li>
+          <a href="/wiki/GettingStarted">Getting Started</a>
+        </li>
+        <li>
+          <a href="/docs">Docs</a>
+        </li>
+        <li class="dropdown">
+          <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Info
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/wiki/tutorials">Tutorials</a>
+            </li>
+            <li>
+              <a href="/wiki/FrequentlyAskedQuestions">Pygame FAQ</a>
+            </li>
+            <li>
+              <a href="/wiki/info">Help (irc, lists)</a>
+            </li>
+            <li>
+              <a href="/wiki/links">Links</a>
+            </li>
+            <li>
+              <a href="/whatsnew.shtml">What's New</a>
+            </li>
+            <li>
+              <a href="/wiki/">Wiki</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Development
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/wiki/patchesandbugs">Bugs &amp; Patches</a>
+            </li>
+            <li>
+              <a href="https://github.com/pygame/">pygame github organisation</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        
+      
+
+      <div class="container" id="content">
+        <div class="row row-offcanvas row-offcanvas-right">
+          <div class="col-xs-12 col-sm-9">
+          
+
+          
+  
+  
+  
+
+    <div class="row">
+      <div class="col-sm-3 wiki-toc-nav">
+        <div id="toc-sidebar">
+          
+            <nav class="wiki-toc-nav" id="toc"><ul class="nav"><li><a class="lih4" href="#Socials">Socials</a></li><li><a class="lih4" href="#Forums%20and%20Newsgroups">Forums and Newsgroups</a></li></ul></nav>
+          
+
+          <nav class="wiki-nav">
+            <p>Wiki tools</p>
+            <a class="btn btn-default" href="/wiki/info/edit" role="button">Edit</a>
+            <a class="btn btn-default" href="/wiki/info/source" role="button">Source</a>
+            <a class="btn btn-default" href="/wiki/info/history" role="button">History</a><a class="btn btn-default" href="/wiki/recent" role="button">Recent Changes</a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <h1>Help (irc, lists) &mdash; <a href="/wiki">wiki</a></h1>
+        <div class="wiki-content">
+          <div><h4 class="wiki-heading" id="Socials">Socials<a class="header_link" href="#Socials" title="Permalink to this definition">¶</a></h4>
+
+<h4 class="wiki-heading" id="Forums and Newsgroups">Forums and Newsgroups<a class="header_link" href="#Forums%20and%20Newsgroups" title="Permalink to this definition">¶</a></h4>
+
+<p>There is a mailing list mirror of the old mailing list at <a href="http://groups.google.com/group/pygame-mirror-on-google-groups" rel="nofollow"> google groups mirror</a>. It started mirroring the mailing list in 2008/04/28.</p>
+
+<p>The old mailing list is currently archived by <a href="http://archives.seul.org/pygame/users/" rel="nofollow"> Seul.org</a>.</p>
+</div>
+        </div>
+      </div>
+    </div>
+  
+
+        </div><!--/.col-xs-12.col-sm-9-->
+          <div class="col-xs-12 col-sm-3 sidebar-offcanvas" id="sidebar">
+          
+              
+              <div class="list-group">
+                
+                  <a class="list-group-item" href="https://www.pygame.org/register">New members signup</a>
+                  <a class="list-group-item" href="https://www.pygame.org/login">Log In</a>
+                
+              </div>
+              
+
+              
+
+              
+  
+  
+  
+
+  <style>
+    .project-title {
+      bottom:10px;
+    }
+    .project-releases .list-group-item {
+      min-height: 68px;
+    }
+    .project-releases span {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 2px 4px;
+    }
+
+    .dark-theme .project-title {
+      bottom: 10px;
+      color: #fff;
+    }
+    .dark-theme .project-releases .list-group-item {
+      min-height: 68px;
+      background-color: #444;
+      border-color: #333;
+    }
+    .dark-theme .project-releases .list-group-item a {
+      font-style: initial;
+    }
+    .dark-theme .project-releases span {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 2px 4px;
+      color: #333;
+    }
+</style>
+
+  <h2>Recent Releases</h2>
+  <div class="list-group project-releases">
+  <a href="/project/1698/8263"
+       class="list-group-item underline-on-hover"
+       title="&lt;p&gt;Space max is a type of space invaders&lt;/p&gt;">
+      <span class="project-released">
+        23 Mar, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/c298166fabad7f2278a6b1bb96f3cc15.png" alt="&lt;p&gt;Space max is a type of space invaders&lt;/p&gt;">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Spacemax - 8.3
+      </span>
+    </a>
+  <a href="/project/5667/8262"
+       class="list-group-item underline-on-hover"
+       title="Wrote a clone of brick breaker game. I also added powers. There are 5 levels as of now. There are unlimited lives.">
+      <span class="project-released">
+        16 Feb, 2025
+      </span>
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        PyBrickBreaker - 1.0
+      </span>
+    </a>
+  <a href="/project/5660/8261"
+       class="list-group-item underline-on-hover"
+       title="【Imperial Ambitions 3K】is a Three-Kingdoms-themed, turn-based strategy game written in Python. The current version features 8 playable factions, 25 unit types, 100+ recruitable generals with 100+ special attacks/skills, and a full campaign with diplomacy options, tech trees, and more!">
+      <span class="project-released">
+        7 Feb, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/a00db8aa7556a8ad1e4e216825a0935e.png" alt="【Imperial Ambitions 3K】is a Three-Kingdoms-themed, turn-based strategy game written in Python. The current version features 8 playable factions, 25 unit types, 100+ recruitable generals with 100+ special attacks/skills, and a full campaign with diplomacy options, tech trees, and more!">
+      <span class="project-title dont-break-out underline-on-hover-underline" style=position:inherit;bottom:auto>
+        Imperial Ambitions - Three Kingdoms - Beta 1.1
+      </span>
+    </a>
+  <a href="/project/1305/8260"
+       class="list-group-item underline-on-hover"
+       title="Free side-scrolling team action game.">
+      <span class="project-released">
+        5 Feb, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/7d83ba921016f6ddeffaacd5f2144b2a.png" alt="Free side-scrolling team action game.">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Trosnoth - 1.21.0
+      </span>
+    </a>
+  <a href="/project/5157/8259"
+       class="list-group-item underline-on-hover"
+       title="A usable pixel art program written in Python">
+      <span class="project-released">
+        30 Jan, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/f164bc95f7be5394e1cc9826ecfc35d5.png" alt="A usable pixel art program written in Python">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        PyDPainter - Release 2.1.0
+      </span>
+    </a>
+  <a href="/project/5666/8258"
+       class="list-group-item underline-on-hover"
+       title="A pacman clone made with python and pygame">
+      <span class="project-released">
+        23 Jan, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/f4ad48699fc63a04bf1807cc9a571343.png" alt="A pacman clone made with python and pygame">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Pacman clone - 1.0
+      </span>
+    </a>
+  <a href="/project/3973/8257"
+       class="list-group-item underline-on-hover"
+       title="a multiplayer using tcp/ip sockets">
+      <span class="project-released">
+        6 Jan, 2025
+      </span>
+      <img class="img-responsive" src="/thumb/5dbf151ef8661dc5a53c7c8bf0cee7b3.png" alt="a multiplayer using tcp/ip sockets">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        BattleTanks - 2.0
+      </span>
+    </a>
+  <a href="/project/4586/8256"
+       class="list-group-item underline-on-hover"
+       title="Full-featured game console based on pygame that can be integrated in your python game in order to execute python command/scripts/custom in-gamefunctions">
+      <span class="project-released">
+        29 Nov, 2024
+      </span>
+      <img class="img-responsive" src="/thumb/e59b8212cc7124061b17762d4e7459ac.png" alt="Full-featured game console based on pygame that can be integrated in your python game in order to execute python command/scripts/custom in-gamefunctions">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Pygame Game Console - 2.0
+      </span>
+    </a>
+  <a href="/project/5665/8255"
+       class="list-group-item underline-on-hover"
+       title="dice + plinko ">
+      <span class="project-released">
+        14 Nov, 2024
+      </span>
+      <img class="img-responsive" src="/thumb/3b5469bcd0748b7d12966e5561d2c360.png" alt="dice + plinko ">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Diechinko - .01
+      </span>
+    </a>
+  <a href="/project/5664/8254"
+       class="list-group-item underline-on-hover"
+       title="I don&#39;t see many use pygame for purposes other than game development so here it is with another example. Elden RIng fan videos and game made using pure pygame and python.">
+      <span class="project-released">
+        13 Nov, 2024
+      </span>
+      <img class="img-responsive" src="/thumb/227c699844d17d0b125f9c40c722b03a.png" alt="I don&#39;t see many use pygame for purposes other than game development so here it is with another example. Elden RIng fan videos and game made using pure pygame and python.">
+      <span class="project-title dont-break-out underline-on-hover-underline">
+        Pygame for animated story - 1
+      </span>
+    </a>
+  </div>
+
+
+  <div>
+  <a href='/tags/pygame' class="btn btn-default" role="button">pygame <span class="badge">844</span></a>
+  <a href='/tags/2d' class="btn btn-default" role="button">2d <span class="badge">783</span></a>
+  <a href='/tags/arcade' class="btn btn-default" role="button">arcade <span class="badge">744</span></a>
+  <a href='/tags/game' class="btn btn-default" role="button">game <span class="badge">397</span></a>
+  <a href='/tags/python' class="btn btn-default" role="button">python <span class="badge">342</span></a>
+  <a href='/tags/puzzle' class="btn btn-default" role="button">puzzle <span class="badge">341</span></a>
+  <a href='/tags/shooter' class="btn btn-default" role="button">shooter <span class="badge">268</span></a>
+  <a href='/tags/strategy' class="btn btn-default" role="button">strategy <span class="badge">257</span></a>
+  <a href='/tags/action' class="btn btn-default" role="button">action <span class="badge">222</span></a>
+  <a href='/tags/space' class="btn btn-default" role="button">space <span class="badge">153</span></a>
+  <a href='/tags/other' class="btn btn-default" role="button">other <span class="badge">152</span></a>
+  <a href='/tags/libraries' class="btn btn-default" role="button">libraries <span class="badge">151</span></a>
+  <a href='/tags/simple' class="btn btn-default" role="button">simple <span class="badge">143</span></a>
+  <a href='/tags/platformer' class="btn btn-default" role="button">platformer <span class="badge">138</span></a>
+  <a href='/tags/multiplayer' class="btn btn-default" role="button">multiplayer <span class="badge">127</span></a>
+  <a href='/tags/rpg' class="btn btn-default" role="button">rpg <span class="badge">118</span></a>
+  <a href='/tags/retro' class="btn btn-default" role="button">retro <span class="badge">98</span></a>
+  <a href='/tags/applications' class="btn btn-default" role="button">applications <span class="badge">93</span></a>
+  <a href='/tags/3d' class="btn btn-default" role="button">3d <span class="badge">87</span></a>
+  <a href='/tags/gpl' class="btn btn-default" role="button">gpl <span class="badge">82</span></a>
+  <a href='/tags/pyopengl' class="btn btn-default" role="button">pyopengl <span class="badge">74</span></a>
+  <a href='/tags/snake' class="btn btn-default" role="button">snake <span class="badge">72</span></a>
+  <a href='/tags/pyweek' class="btn btn-default" role="button">pyweek <span class="badge">71</span></a>
+  <a href='/tags/geometrian' class="btn btn-default" role="button">geometrian <span class="badge">68</span></a>
+  <a href='/tags/library' class="btn btn-default" role="button">library <span class="badge">66</span></a>
+  <a href='/tags/gui' class="btn btn-default" role="button">gui <span class="badge">63</span></a>
+  <a href='/tags/physics' class="btn btn-default" role="button">physics <span class="badge">62</span></a>
+  <a href='/tags/engine' class="btn btn-default" role="button">engine <span class="badge">59</span></a>
+  <a href='/tags/simulation' class="btn btn-default" role="button">simulation <span class="badge">55</span></a>
+  <a href='/tags/adventure' class="btn btn-default" role="button">adventure <span class="badge">52</span></a>
+  <br/><br/>
+    <a href='/tags' class="btn btn-default" role="button">ALL the tags!</a>
+  </div>
+
+
+            
+          </div><!--/.sidebar-offcanvas-->
+        </div><!--/row-->
+        <hr>
+        <footer>
+          <p></p>
+        </footer>
+      </div><!--/.container-->
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

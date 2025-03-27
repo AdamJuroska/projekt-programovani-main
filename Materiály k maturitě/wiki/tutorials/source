@@ -1,0 +1,59 @@
+<p>The pygame <a href="../docs/"> Documentation</a> page has a number of tutorials. <a href="../docs/tut/newbieguide.html">A Newbie Guide to pygame</a> is very good.</p>
+
+<p>There are lots of examples that come with pygame. See <a href="https://github.com/pygame/pygame/tree/master/examples">https://github.com/pygame/pygame/tree/master/examples</a>. They should be installed, and are runnable like: <pre>python -m pygame.examples.aliens</pre></p>
+
+<p>Below are unofficial tutorials and guides. Anything with wrong install instructions is not allowed.</p>
+
+<h3>General Tutorials</h3>
+<ul>
+<li><a href="http://pygametutorials.wikidot.com/tutorials-basic">PyGame object oriented tutorials</a> by przemo_li
+<li><a href="https://www.patternsgameprog.com/series/discover-python-and-patterns/">Discover Python & Pattern - Create a  game with Pygame and Design Patterns</a>
+<li><a href="https://coderslegacy.com/python/python-pygame-tutorial/">A complete Pygame Tutorial -  Game Creation</a>
+</ul>
+
+<h3>Pygame Tutorials on Specific Topics</h3>
+<ul>
+<li><a href="https://coderslegacy.com/python/pygame-platformer-game-development/">Python Platformer Tutorial</a>
+<li><a href="https://coderslegacy.com/improving-speed-performance-in-pygame/">Improving Performance in Pygame</a>
+<li><a href="http://www.youtube.com/watch?v=7AKatTpNSNQ&list=PLE3D1A71BB598FEF6">PyGame Physics Youtube Tutorials</a> by maaack
+<li><a href="https://www.youtube.com/playlist?list=PLQVvvaa0QuDdLkP8MrOXLe_rKuf6r80KO">YouTube series creating a top down racing game with Python 3</a>
+<li><a href = "https://coderslegacy.com/python/pygame-scrolling-background/">Pygame - scrolling background</a>
+<li><a href ="https://coderslegacy.com/python/create-menu-screens-in-pygame-tutorial/"> Pygame Menu-creation Library</a>
+</ul>
+
+<h3>Books with Pygame Tutorials</h3>
+<ul>
+</ul>
+
+<h3>Non-English Resources</h3>
+
+<h4>Spanish</h4>
+<ul>
+<li><a href="http://razonartificial.com/tutoriales-pygame/"> Tutoriales para comenzar</a>
+<li><a href="https://github.com/Patataman/PythonBasic/tree/master/frameworks/pygame">Repositorio Python+Pygame</a>
+</ul>
+
+<h4>Brazilian Portuguese</h4>
+<ul>
+<li><a href="https://old.gustavobarbieri.com.br/jogos/jogo/doc/"> Introdu&ccedil;&atilde;o a Programa&ccedil;&atilde;o de Jogos usando PyGame</a> (Introduction to Game Development using PyGame). This covers the basics and the final target is a good side-scrolling game. 
+</ul>
+
+<h4>Fran&ccedil;ais (french)</h4>
+
+<ul>
+<li>Sur <a href="http://fr.wikibooks.org/wiki/Pygame"> Wikibooks</a>, Traduction compl&iuml;&iquest;&frac12;te des tutoriels officiels de Pete Shinners.
+</ul>
+
+<h4>Greek</h4>
+<ul>
+<li><a href="http://pygamegr.wordpress.com">Python Game Programming (Greek)</a> - A free Pygame book for Greek audiences. Introduces programming in a fun way. No previous experience required.
+</ul>
+
+<h4>Polish</h4>
+<ul>
+<li><a href="https://programisty-dzien-powszedni.pl/tag/pygame/">Artykuły o PyGame na blogu Programisty Dzień Powszedni</a>
+</ul>
+
+<h4>Italian</h4>
+<ul>
+</ul>

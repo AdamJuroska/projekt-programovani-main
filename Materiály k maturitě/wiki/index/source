@@ -1,0 +1,57 @@
+<p>Welcome to the pygame wiki! --- feel free to add what you like.</p>
+<p><br /><br /></p>
+<table border="0">
+<tbody>
+<tr>
+<td><a href="about">About</a></td>
+<td><a href="FrequentlyAskedQuestions">FAQ</a></td>
+<td><a href="info">Help (irc, lists)</a></td>
+<td><a href="tutorials">Tutorials</a></td>
+<td><a href="resources">Resources</a></td>
+<td><a href="interviews">Interviews</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>How to [[Contribute]].</p>
+<p>&nbsp;</p>
+<table border="0">
+<tbody>
+<tr valign="top">
+<td><a href="distributing"> Ipphink about when distributing PyGame <br /> </a><a href="Profiling"> Profiling</a><a href="distributing"><br /> </a><a href="gui"> GUIs</a><a href="distributing"><br /> </a><a href="CookBook"> CookBook</a><a href="distributing"><br /> </a><a href="gsoc2011ideas"> GSoC 2011 Ideas</a><a href="distributing"><br /> </a><a href="gsoc2010ideas"> GSoC 2010 Ideas</a><a href="distributing"><br /> </a><a href="helprequesthowto"> How to post a help request</a><a href="distributing"><br /> </a><a href="http://pygameweb.no-ip.org/trac/"> New Pygame Web Site Project</a><a href="distributing"><br /> </a><a href="gsoc2009readinglist"> gsoc2009readinglist</a><a href="distributing"><br /></a></td>
+<td>
+<p><a href="patchesandbugs"> Bugs &amp; Patches</a><br /> <a href="todo"> Pygame development - todo list</a><br /> <a href="Hacking"> Hacking pygame guide</a> - notes for modifying pygame.<br /> <a href="cvs"> subversion</a><br /> <a href="alphatoalphablit"> Alpha to Alpha Surface Blit Guarantees</a><br /> <a href="python3porting"> Porting Pygame 1.9 to Python 3.0</a><br /> <a href="pgreloaded"> Pygame Reloaded</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="0">
+<tbody>
+<tr>
+<td><strong>Install tips:</strong></td>
+<td><a href="macintosh">Mac OS X</a></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table border="0">
+<tbody>
+<tr>
+<td><strong><a href="Compilation">Compilation</a>:</strong></td>
+<td><a href="CompileWindows"> Windows</a></td>
+<td><a href="MingW"> MingW gcc on windows</a></td>
+<td><a href="MacCompile"> MacOSX</a></td>
+<td><a href="CompileFedora">Fedora</a></td>
+<td><a href="CompileUbuntu">Ubuntu</a></td>
+<td><a href="CompileSuse">Suse</a></td>
+<td><a href="CompileRedHat">Red Hat</a></td>
+<td><a href="CompilePythonCE">Python CE</a></td>
+</tr>
+</tbody>
+</table>
+<p><br /> [[syntax]]<br /> <a href="index"> index </a><br /> <a href="Glossary"> Glossary</a></p>
+<p>This wiki adds <a href="http://en.wikipedia.org/wiki/Nofollow">rel="nofollow"</a> to external links, so spam links get no advantage from posting links here - just making a bunch of hackers angry at them (never a good idea).</p>
+<p>Please don't add more spam! Thanks :)</p>
+<p>example: rel=nofollow link</p>
